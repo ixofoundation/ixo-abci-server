@@ -39,7 +39,7 @@
       - 120
       - 2
     semi:
-      - 2
+      - 0
       - never
     strict:
       - 2
