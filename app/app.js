@@ -1,4 +1,4 @@
-var abci = require("ixo-abci-server");
+var abci = require("../src/index");
 var util = require("util");
 
 function CounterApp() {
@@ -76,7 +76,7 @@ CounterApp.prototype.commit = function (req, cb) {
 
   this.hashCount += 1;
   if (this.txCount == 0) {
-    return cb({log: "Zero tx count; hash is empth"});
+    return cb({log: "Zero tx count; hash is empty"});
   }
   var buf = new Buffer(8);
   buf.writeIntBE(this.txCount, 0, 8);
